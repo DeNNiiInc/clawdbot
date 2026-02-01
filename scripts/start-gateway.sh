@@ -48,7 +48,7 @@ EOFNODE
 echo "Starting OpenClaw Gateway..."
 # Use the flags from the sample: --allow-unconfigured --bind lan (or 0.0.0.0)
 # We use the env var for token as well just in case config is ignored
-exec clawdbot gateway \
+exec node dist/index.js gateway \
     --port 18789 \
     --verbose \
     --allow-unconfigured \
