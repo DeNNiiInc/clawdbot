@@ -28,6 +28,8 @@ services:
         "${OPENCLAW_GATEWAY_PORT:-18789}",
         "--allow-unconfigured",
         "--verbose",
+        "--token",
+        "${OPENCLAW_GATEWAY_TOKEN}",
       ]
 
   openclaw-cli:
