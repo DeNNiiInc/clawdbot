@@ -1,13 +1,7 @@
 #!/bin/bash
 set -e
 
-CONFIG_DIR="/root/.openclaw" # Default config dir for OpenClaw in container usually
-# But the container seems to mistakenly use /root/OpenClaw/config sometimes based on my previous commands.
-# Let's check where the gateway actually looks.
-# The previous `docker-compose.yml` mapped `./config:/root/.openclaw`.
-# So inside the container it is `/root/.openclaw/config.json`.
-
-CONFIG_DIR="/root/.openclaw"
+CONFIG_DIR="/home/node/.openclaw"
 CONFIG_FILE="$CONFIG_DIR/config.json"
 
 mkdir -p "$CONFIG_DIR"
